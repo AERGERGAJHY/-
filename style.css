@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css?family=Krub:400,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #202020;
+    font-family: 'Krub', sans-serif;
+}
+
+.card {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    height: 580px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
+    background: #151515;
+    overflow: hidden;
+
+    .ds-top {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 300px;
+        height: 80px;
+        background: #027272;
+        animation: dsTop 1.5s;
+    }
+
+    .avatar-holder {
+        position: absolute;
+        margin: auto;
+        top: 40px;
+        right: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        box-shadow: 6 6 6 5px #151515;
+        background: white;
+        overflow: hidden;
+        animation: mvTop 1.5s;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .name {
+        position: absolute;
+        margin-top: 220px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        top: -60px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: inherit;
+        height: 40px;
+        text-align: center;
+        animation: fadeIn 2s ease-in;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+
+            &:hover {
+                text-decoration: underline;
+                color: #06f2f2;
+            }
+        }
+
+        h6 {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: white;
+            width: 40px;
+        }
+    }
+
+
+    .ds-info {
+        position: absolute;
+        margin: auto;
+        top: 120px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: inherit;
+        height: 40px;
+        display: flex;
+        margin-top: 120px;
+
+
+        .projects{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -20px;
+            position: relative;
+            left: -300px;
+            width: calc(250px / 3);
+            text-align: center;
+            color: white;
+            animation: fadeInMove 2s;
+            animation-fill-mode: forwards;
+
+            h6 {
+                text-transform: uppercase;
+                color: #06f2f2;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .ds {
+            &:nth-of-type(2) {
+                animation-delay: .5s;
+            }
+
+            &:nth-of-type(1) {
+                animation-delay: 1s;
+            }
+        }
+    }
+
+    .ds-skill {
+        position: absolute;
+        margin: auto;
+        bottom: 15px;
+        right: 0;
+        left: 0;
+        width: 200px;
+        animation: mvBottom 1.5s;
+
+        h6 {
+            margin-bottom: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .skill {
+            h6 {
+                font-weight: 400;
+                font-size: 8px;
+                letter-spacing: 0.05em;
+                color: white;
+            }
+
+            .fab {
+                color: #06f2f2;
+                font-size: 14px;
+            }
+
+            .bar {
+                height: 5px;
+                background: #06f2f2;
+                text-align: right;
+
+                p {
+                    color: white;
+                    font-size: 8px;
+                    padding-top: 5px;
+                    animation: fadeIn 5s;
+                }
+
+                &:hover {
+                    background: white;
+                }
+            }
+
+            .bar-html {
+                width: 95%;
+                animation: htmlSkill 1s;
+                animation-delay: .4s;
+            }
+
+            .bar-css {
+                width: 90%;
+                animation: cssSkill 2s;
+                animation-delay: .4s;
+            }
+
+            .bar-js {
+                width: 75%;
+                animation: jsSkill 3s;
+                animation-delay: .4s;
+            }
+        }
+    }
+}
+
+@keyframes fadeInMove {
+    0% {
+        opacity: 0;
+        left: -300px;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes htmlSkill {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 95%;
+    }
+}
+
+@keyframes cssSkill {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes jsSkill {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes mvBottom {
+    0% {
+        bottom: -150px;
+    }
+
+    100% {
+        bottom: 15px;
+    }
+}
+
+@keyframes mvTop {
+    0% {
+        top: -150px;
+    }
+
+    100% {
+        top: 40px;
+    }
+}
+
+@keyframes dsTop {
+    0% {
+        top: -150px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.social {
+    margin-top: 20px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socialContainer {
+    width: 40px !important;
+    height: 40px !important;
+    margin: auto;
+    border-radius: 90%;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+}
+
+.containerOne:hover {
+    background-color: #d62976;
+    transition-duration: 0.3s;
+}
+
+.containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: 0.3s;
+}
+
+
+
+.containerFour:hover {
+    background-color: #09b0fd;
+    transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+.socialContainer:hover .socialSvg2 {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
