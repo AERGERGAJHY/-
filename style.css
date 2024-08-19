@@ -20,6 +20,8 @@ body {
 .card {
     position: absolute;
     margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     top: 0;
     right: 0;
     bottom: 0;
@@ -196,19 +198,44 @@ body {
             }
 
             .bar-html {
-                width: 95%;
+                width: 98%;
                 animation: htmlSkill 1s;
                 animation-delay: .4s;
             }
 
             .bar-css {
-                width: 90%;
+                width: 97%;
                 animation: cssSkill 2s;
                 animation-delay: .4s;
             }
 
             .bar-js {
+                width: 93%;
+                animation: jsSkill 3s;
+                animation-delay: .4s;
+            }
+            .bar-bt {
+                width: 96%;
+                animation: jsSkill 3s;
+                animation-delay: .4s;
+            }
+            .bar-py {
+                width: 72%;
+                animation: jsSkill 3s;
+                animation-delay: .4s;
+            }
+            .bar-jv {
+                width: 81%;
+                animation: jsSkill 3s;
+                animation-delay: .4s;
+            }
+            .bar-kt {
                 width: 75%;
+                animation: jsSkill 3s;
+                animation-delay: .4s;
+            }
+            .bar-cp {
+                width: 63%;
                 animation: jsSkill 3s;
                 animation-delay: .4s;
             }
